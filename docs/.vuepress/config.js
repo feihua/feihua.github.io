@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Zero',
+  title: 'zero-mall',
   description: 'zero-admin文档',
   markdown: {
     lineNumbers: true,
@@ -14,7 +14,14 @@ module.exports = {
     "@vuepress/nprogress",
     ["@vuepress/plugin-medium-zoom"]
   ],
+  head: [
+    // 设置 favor.ico，docs/.vuepress/public 下
+    [
+      'link', { rel: 'icon', href: '/images/logo.png' }
+    ]
+  ],
   themeConfig: {
+    // logo: '/images/logo.png',// 注意图片放在 public 文件夹下
     nav: [
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/backend/' },
@@ -33,7 +40,7 @@ module.exports = {
       // { text: '周边生态', link: '/about' },
       // { text: '查看文档源码', link: 'https://github.com/feihua/zero-admin-doc' },
     ],
-    sidebarDepth: 2,
+    sidebarDepth: 3,
     sidebar: {
       "/summary/": [""], //这样自动生成对应文章
       '/backend/': [

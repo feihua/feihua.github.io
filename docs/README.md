@@ -1,17 +1,18 @@
 ---
 home: true
-# heroImage: /hero.png
-heroText: Zero
-tagline: 简单的admin项目模板
+heroImage: /images/logo.png
+heroText: 
+tagline: 以go-zero rpc框架为中心的开源电商系统
+
 actionText: 快速上手 →
 actionLink: /backend/
 features:
 - title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+  details: 以go-zero rpc框架为中心，以最少的配置帮助你专注于开发。
+- title: 主流技术栈
+  details: go-zero、react、flutter、redis、mysql、docker、k8s等主流技术栈
+- title: 全栈开源
+  details: 无过度自定义封装逻辑，方便学习理解和二次开发，持续更新...
 footer: Apache-2.0 Licensed | Copyright © 2023-present koobe
 ---
 
