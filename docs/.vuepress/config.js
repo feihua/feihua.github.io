@@ -65,6 +65,7 @@ module.exports = {
     ],
     sidebarDepth: 3,
     lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
+    repo: 'feihua/zero-admin', // 导航栏右侧生成Github链接
     sidebar: {
       "/summary/": [""], //这样自动生成对应文章
       '/backend/': [
