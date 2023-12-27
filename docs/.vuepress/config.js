@@ -18,9 +18,8 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/backend/' },
-      { text: '使用文档1', link: '/bar/' },
       {
-        text: '演示地址', link: 'http://139.159.180.129:81/mall/welcome'
+        text: '演示地址', link: 'http://110.41.179.89/mall '
       },
       {
         text: '项目地址',
@@ -31,8 +30,8 @@ module.exports = {
       },
       // { text: 'go', link: '/foo/' },
       // { text: 'rust', link: '/foo1/' },
-      { text: '周边生态', link: '/about' },
-      { text: '查看文档源码', link: 'https://github.com/feihua/zero-admin-doc' },
+      // { text: '周边生态', link: '/about' },
+      // { text: '查看文档源码', link: 'https://github.com/feihua/zero-admin-doc' },
     ],
     sidebarDepth: 2,
     sidebar: {
@@ -40,12 +39,21 @@ module.exports = {
       '/backend/': [
         '',     /* /foo/ */
         {
+          title: '二次开发',
+          collapsable: false, // 可选的, 默认值是 true,
+          children: [
+            'development/goland',
+          ]
+        },
+        {
           title: '部署相关',   // 必要的
           collapsable: false, // 可选的, 默认值是 true,
           children: [
+            'deploy/docker',
             'deploy/k8s'
           ]
         },
+
       ],
       '/foo/': [
         '',     /* /foo/ */
