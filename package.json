@@ -8,7 +8,11 @@
     "@vuepress/plugin-back-to-top": "^1.9.8",
     "markdown-it-disable-url-encode": "^1.0.1",
     "@vuepress/plugin-medium-zoom": "^1.2.0",
-    "vuepress": "^1.9.8"
+    "vuepress": "^1.9.8",
+    "vuepress-plugin-comment": "^0.7.3",
+    "dayjs": "^1.9.7",
+    "@vssue/api-github-v3": "^1.4.4",
+    "@vssue/vuepress-plugin-vssue": "^1.4.6"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -17,6 +21,8 @@
   "dependencies": {
     "vuepress-plugin-code-copy": "^1.0.6",
     "@vuepress/plugin-nprogress": "^1.2.0",
-    "@vuepress/plugin-medium-zoom": "^1.2.0"
+    "@vuepress/plugin-medium-zoom": "^1.2.0",
+    "@vssue/api-github-v3": "^1.4.4",
+    "@vssue/vuepress-plugin-vssue": "^1.4.6"
   }
 }

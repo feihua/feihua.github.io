@@ -1,35 +1,30 @@
 # 在docker上部署
 
-## 1.先看下部署的效果
+## 环境准备
+### redis中间件
 
-### 1.1项目预览
+```bash
+docker run -itd --name redis -p 6379:6379 redis --requirepass 123456
+```
 
-![image-20231227094812485](k8s.assets/image-20231227094812485.png)
+参数说明：--name是启动容器的名字， -p是映射端口，--requirepass是密码
 
-### 1.2项目概览
+### etcd注册中心
 
-![image-20231227094934471](k8s.assets/image-20231227094934471.png)
+```bash
+下载二进制文件
+wget https://github.com/etcd-io/etcd/releases/download/v3.5.9/etcd-v3.5.9-linux-amd64.tar.gz
 
-### 1.3项目服务
+tar -zxvf etcd-v3.5.9-linux-amd64.tar.gz && cd etcd-v3.5.9-linux-amd64 && nohup ./etcd &
+```
 
-![image-20231227095009680](k8s.assets/image-20231227095009680.png)
 
-### 1.4工作负载
 
-![image-20231227095052928](k8s.assets/image-20231227095052928.png)
+### mysql数据库
 
-### 1.5容器组
+```bash
+docker run -p 3306:3306 --name mysql --restart=always \
+--privileged=true -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
+```
 
-![image-20231227095111216](k8s.assets/image-20231227095111216.png)
-
-### 1.6front-api的deployments
-
-![image-20231227095234237](k8s.assets/image-20231227095234237.png)
-
-### 1.7front-api的pods
-
-![image-20231227095328574](k8s.assets/image-20231227095328574.png)
-
-### 1.8front-api的日志
-
-![image-20231227095837116](k8s.assets/image-20231227095837116.png)
+参数说明：--name是启动容器的名字， -p是映射端口，--MYSQL_ROOT_PASSWORD是密码
