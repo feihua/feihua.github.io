@@ -68,5 +68,3 @@ go run main.go --config=config.toml
 "Hello Ego"%  
 ```
 
-
-<Vssue title="quickStart" />

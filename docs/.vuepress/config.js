@@ -49,7 +49,7 @@ module.exports = {
       { text: '首页', link: '/' },
       { text: '使用文档', link: '/backend/' },
       {
-        text: '演示地址', link: 'http://110.41.179.89/mall '
+        text: '演示地址', link: '/demo/'
       },
       {
         text: '项目地址',
@@ -86,6 +86,9 @@ module.exports = {
           ]
         },
 
+      ],
+      '/demo/':[
+          ''
       ],
       '/foo/': [
         '',     /* /foo/ */
