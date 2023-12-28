@@ -63,7 +63,8 @@ module.exports = {
                     title: '后端',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
                     children: [
-                        'backend/code',
+                        'backend/development/env',
+                        'backend/development/start',
                         'backend/development/goland',
                         'backend/deploy/docker',
                         'backend/deploy/k8s'
