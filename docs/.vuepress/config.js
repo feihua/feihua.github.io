@@ -74,6 +74,7 @@ module.exports = {
                     title: '前端',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
                     children: [
+                        'frontend/overview',
                         'frontend/dev',
                         'frontend/build',
                     ]
@@ -82,6 +83,7 @@ module.exports = {
                     title: '移动端',   // 必要的
                     collapsable: false, // 可选的, 默认值是 true,
                     children: [
+                        'app/overview',
                         'app/dev',
                         'app/build',
                     ]
