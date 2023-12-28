@@ -5,7 +5,7 @@ heroText:
 tagline: 以go-zero rpc框架为中心的开源电商系统
 
 actionText: 快速上手 →
-actionLink: /backend/
+actionLink: /mall/
 features:
 - title: 简洁至上
   details: 以go-zero rpc框架为中心，以最少的配置帮助你专注于开发
