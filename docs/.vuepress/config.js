@@ -41,7 +41,16 @@ module.exports = {
         // 设置 favor.ico，docs/.vuepress/public 下
         [
             'link', {rel: 'icon', href: '/images/logo.png'}
-        ]
+        ],
+        ["script",{},`
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?db45b22dd80cbdd69ce7f89efe8f8581";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+        `]
     ],
     themeConfig: {
         // logo: '/images/logo.png',// 注意图片放在 public 文件夹下
