@@ -31,43 +31,42 @@ Mysql:
 
 ## 3.启动etcd
 
+**3.1 window下启动**
 ![image-20231229094421149](start.assets/image-20231229094421149.png)
+
+**3.2 linux下启动**
+```shell
+nohup ./etcd --listen-client-urls http://0.0.0.0:2379 --advertise-client-urls http://0.0.0.0:2379 &
+```
 ::: tip
-**在window下开发的如上,根据自己的实际情况而定。**
+**根据自己的实际情况而定。**
 :::
 
 ## 4.启动项目
 
+**4.1 goand idea工具顶部栏启动**
 ![image-20231229095416570](start.assets/image-20231229095416570.png)
 
-## 4.验证服务
-**4.1后端接口验证**
-zero-admin\api\doc\http\sys\user.http
-```yaml
-###用户登录
-  POST {{host}}/api/sys/user/login
-Content-Type: application/json
+**4.2 makefile方法启动**
 
-  {
-    "userName": "admin",
-    "password": "123456"
-  }
-  > {% client.global.set("token", response.body.token); %}
-
+```shell
+make
 ```
-**4.1移动端接口验证**
+![image-20231229095416574.png](start.assets/image-20231229095416574.png)
+
+
+## 5.验证服务
+**5.1后端接口验证**
+zero-admin\api\doc\http\sys\user.http
+
+**用户登录**
+![image-20231229095416572.png](start.assets/image-20231229095416572.png)
+**5.2移动端接口验证**
 zero-admin\front-api\doc\http\member.http
-```yaml
-### app会员登录
-POST {{host}}/api/member/login
-Content-Type: application/json
 
-{
-  "mobile": "18613030352",
-  "password": "123456"
-}
-> {% client.global.set("token", response.body.data.token); %}
+**app会员登录**
 
+![image-20231229095416573.png](start.assets/image-20231229095416573.png)
 ```
 ::: tip
 **记得修改上面的host变量为你自己的ip**
