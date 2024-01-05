@@ -5,13 +5,16 @@
 参考：[在 Linux 上以 All-in-One 模式安装 KubeSphere](https://www.kubesphere.io/zh/docs/v3.4/quick-start/all-in-one-on-linux/)
 
 ```shell
+#下载 KubeKey
+curl -sfL https://get-kk.kubesphere.io | VERSION=v3.0.13 sh -
+#添加可执行权限
+chmod +x kk
+#设置镜像环境
 export KKZONE=cn
+#开始安装
 ./kk create cluster --with-kubernetes v1.22.12 --with-kubesphere v3.4.1
 ```
-::: tip
-文档上没有提示这个 export KKZONE=cn, 加上这个,镜像将走国内网络
 
-:::
 
 ## 2.脚本
 
