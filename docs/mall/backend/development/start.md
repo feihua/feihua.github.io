@@ -36,6 +36,9 @@ Mysql:
 
 **3.2 linux下启动**
 ```shell
+wget https://github.com/etcd-io/etcd/releases/download/v3.5.11/etcd-v3.5.11-linux-amd64.tar.gz
+tar -zxvf etcd-v3.5.11-linux-amd64.tar.gz
+cd etcd-v3.5.11-linux-amd64
 nohup ./etcd --listen-client-urls http://0.0.0.0:2379 --advertise-client-urls http://0.0.0.0:2379 &
 ```
 ::: tip
@@ -45,7 +48,10 @@ nohup ./etcd --listen-client-urls http://0.0.0.0:2379 --advertise-client-urls ht
 ## 4.启动项目
 
 **4.1 goand idea工具顶部栏启动**
-![image-20231229095416570](start.assets/image-20231229095416570.png)
+
+![image-20240105172010745](start.assets/image-20240105172010745.png)
+
+
 
 **4.2 makefile方法启动**
 

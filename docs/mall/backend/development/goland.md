@@ -5,6 +5,7 @@
 **安装goctl**
 ```shell
 go install github.com/zeromicro/go-zero/tools/goctl@latest
+goctl env check --install --verbose --force
 ```
 
 ## 1.window下常用脚本
@@ -29,6 +30,7 @@ goctl rpc protoc rpc/sms/sms.proto --go_out=./rpc/sms/ --go-grpc_out=./rpc/sms/ 
 # 生成cmsrpc代码
 goctl rpc protoc rpc/cms/cms.proto --go_out=./rpc/cms/ --go-grpc_out=./rpc/cms/ --zrpc_out=./rpc/cms/ -m
 ```
+
 **1.2生成model**
 ```shell
 goctl  model mysql datasource -url="root:123456@tcp(127.0.0.1:3306)/gozero" -table="sys*" -dir=./rpc/model/sysmodel

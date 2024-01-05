@@ -1,31 +1,34 @@
 # 在docker上部署
 
-## 构建服务
+## 安装docker
 
 ```shell
-docker build -t sys-rpc:0.0.1 -f rpc/sys/Dockerfile .
-docker build -t ums-rpc:0.0.1 -f rpc/ums/Dockerfile .
-docker build -t oms-rpc:0.0.1 -f rpc/oms/Dockerfile .
-docker build -t pms-rpc:0.0.1 -f rpc/pms/Dockerfile .
-docker build -t sms-rpc:0.0.1 -f rpc/sms/Dockerfile .
-docker build -t cms-rpc:0.0.1 -f rpc/cms/Dockerfile .
-docker build -t admin-api:0.0.1 -f api/Dockerfile .
-docker build -t front-api:0.0.1 -f front-api/Dockerfile .
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 ```
+
+![image-20240104171801989](docker.assets/image-20240104171801989.png)
+
+## 构建镜像
+
+在linux下提供makefile脚本,构建docker镜像
+
+```shell
+make image
+
+```
+
+![image-20240105170836180](docker.assets/image-20240105170836180.png)
 
 ## 启动服务
 
+在linux下提供makefile脚本,启动docker镜像
+
 ```shell
-docker run -itd --net=host --name=sys sys-rpc:0.0.1
-docker run -itd --net=host --name=ums ums-rpc:0.0.1
-docker run -itd --net=host --name=oms oms-rpc:0.0.1
-docker run -itd --net=host --name=pms pms-rpc:0.0.1
-docker run -itd --net=host --name=sms sms-rpc:0.0.1
-docker run -itd --net=host --name=cms cms-rpc:0.0.1
-docker run -itd --net=host --name=admin-api admin-api:0.0.1
-docker run -itd --net=host --name=front-api front-api:0.0.1
+make run
 ```
 
+![image-20240105171026136](docker.assets/image-20240105171026136.png)
+
 ::: tip
-**具体脚本在zero-admin\deployment-shell.sh**。
+**具体脚本在zero-admin\makefile**。
 :::
