@@ -29,6 +29,8 @@ make run
 
 ![image-20240105171026136](docker.assets/image-20240105171026136.png)
 
+![image-20240105175549864](docker.assets/image-20240105175549864.png)
+
 ::: tip
-**具体脚本在zero-admin\makefile**。
+**具体脚本在zero-admin\makefile**
 :::

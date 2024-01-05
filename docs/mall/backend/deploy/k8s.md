@@ -47,6 +47,8 @@ serviceaccount.yaml是获取k8s api的权限
 register.yaml 是注册中心(etcd或者k8s),如果不配置,注册中心默认为etcd
 :::
 
+![image-20240105180025502](k8s.assets/image-20240105180025502.png)
+
 ## 3.效果
 
 **3.1项目预览**
