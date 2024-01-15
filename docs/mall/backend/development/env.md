@@ -2,10 +2,19 @@
 
 <font size=5>1.mysql</font>
 ```shell
-docker run --network=host --name mysql --restart=always --privileged=true -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
+docker run --network=host --name mysql -e TZ="Asia/Shanghai" --restart=always --privileged=true -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
 ```
 
 **参数说明**：--MYSQL_ROOT_PASSWORD是密码
+
+::: tip
+**如果容器里的时间少8小时, 通过下面语句修复**。
+
+```shell
+docker cp /usr/share/zoneinfo/Asia/Shanghai mysql:/etc/localtime
+docker restart mysql
+```
+:::
 
 <font size=5>2.redis</font>
 ```shell
