@@ -8,7 +8,7 @@ git clone https://github.com/feihua/zero-admin-ui.git
 **进入目录zero-admin-ui**
 ```shell
 
-npm install
+npm install --legacy-peer-deps
 ```
 ## 修改配置
 **修改代理地址：zero-admin-ui\config\proxy.ts**
@@ -57,3 +57,9 @@ App running at:
 :::
 
 
+## 问题
+如访问的时候报：Unhandled Rejection (Error): Cannot find module 'echarts'
+
+![image-20240102112230351](dev.assets/image-20240102112230352.png)
+
+解决方法： 删除 .umi 文件夹，然后重新启动,再不行就重新安装依赖npm install
