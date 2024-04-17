@@ -102,6 +102,7 @@ var _hmt = _hmt || [];
                     collapsable: false, // 可选的, 默认值是 true,
                     children: [
                         'expand/install_ubuntu',
+                        'expand/install_nginx',
                     ]
                 },
 
