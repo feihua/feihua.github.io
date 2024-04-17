@@ -97,6 +97,13 @@ var _hmt = _hmt || [];
                         'app/build',
                     ]
                 },
+                {
+                    title: '扩展',   // 必要的
+                    collapsable: false, // 可选的, 默认值是 true,
+                    children: [
+                        'expand/install_ubuntu',
+                    ]
+                },
 
             ],
             '/demo/': [
