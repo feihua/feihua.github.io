@@ -91,3 +91,7 @@ server {
 ```shell
 /usr/share/nginx/html
 ```
+
+```
+/usr/sbin/nginx
+```

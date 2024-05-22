@@ -31,18 +31,18 @@ goctl rpc protoc rpc/sms/sms.proto --go_out=./rpc/sms/ --go-grpc_out=./rpc/sms/ 
 goctl rpc protoc rpc/cms/cms.proto --go_out=./rpc/cms/ --go-grpc_out=./rpc/cms/ --zrpc_out=./rpc/cms/ -m
 ```
 
-**1.2生成model**
+**1.2使用gorm的gen生成model**
 ```shell
-goctl  model mysql datasource -url="root:123456@tcp(127.0.0.1:3306)/gozero" -table="sys*" -dir=./rpc/model/sysmodel
-goctl  model mysql datasource -url="root:123456@tcp(127.0.0.1:3306)/gozero" -table="ums*" -dir=./rpc/model/umsmodel
-goctl  model mysql datasource -url="root:123456@tcp(127.0.0.1:3306)/gozero" -table="sms*" -dir=./rpc/model/smsmodel
-goctl  model mysql datasource -url="root:123456@tcp(127.0.0.1:3306)/gozero" -table="oms*" -dir=./rpc/model/omsmodel
-goctl  model mysql datasource -url="root:123456@tcp(127.0.0.1:3306)/gozero" -table="pms*" -dir=./rpc/model/pmsmodel
-goctl  model mysql datasource -url="root:123456@tcp(127.0.0.1:3306)/gozero" -table="cms*" -dir=./rpc/model/cmsmodel
+go run rpc/cms/gen/generator.go
+go run rpc/oms/gen/generator.go
+go run rpc/pms/gen/generator.go
+go run rpc/sms/gen/generator.go
+go run rpc/sys/gen/generator.go
+go run rpc/ums/gen/generator.go
 ```
 
 ::: tip
-注意这个参数：-url="root:123456@tcp(127.0.0.1:3306)/gozero" 修改为你自己的
+ORM持久层已经整体切换成gorm
 :::
 
 ## 2.linux下常用脚本
