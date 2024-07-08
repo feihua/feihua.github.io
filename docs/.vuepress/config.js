@@ -75,6 +75,7 @@ var _hmt = _hmt || [];
                         'backend/development/env',
                         'backend/development/start',
                         'backend/development/goland',
+                        'backend/development/goland-new',
                         'backend/deploy/docker',
                         'backend/deploy/k8s'
                     ]
