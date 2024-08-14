@@ -13,7 +13,7 @@
 * **半成品**
 * **半成品**
 * (react版本预览地址[http://110.41.179.89/pay/home](http://110.41.179.89/pay/home))<span  style="color: red;"> 账号：admin 密码: 123456</span>
-* (vue预览地址[http://110.41.179.89/vue/home)[http://110.41.179.89/vue/home])<span  style="color: red;"> 账号：admin 密码: 123456</span>
+* (vue预览地址[http://110.41.179.89/vue/home)](http://110.41.179.89/vue/home))<span  style="color: red;"> 账号：admin 密码: 123456</span>
 
 * 
 ## 34.app下载地址
