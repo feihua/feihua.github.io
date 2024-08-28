@@ -105,6 +105,7 @@ var _hmt = _hmt || [];
                         'expand/install_ubuntu',
                         'expand/install_nginx',
                         'expand/xshell_color',
+                        'expand/install_kong',
                     ]
                 },
 
