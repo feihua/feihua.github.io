@@ -81,3 +81,8 @@ kong start -c /etc/kong/kong.conf
 curl -i http://localhost:8001
 
 ```
+6. kong manager管理界面
+
+http://localhost:8002
+
+![img.png](img.png)
