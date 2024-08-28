@@ -59,6 +59,11 @@ CREATE DATABASE kong OWNER kong;
 ```
 <span  style="color: red;">这个配置后面kong配置的时候要用</span>
 
+### 5.修改默认密码
+```shell
+ALTER USER postgres WITH PASSWORD 'newpassword';
+```
+
 ## 2.kong安装
 
 ### 2.1安装
