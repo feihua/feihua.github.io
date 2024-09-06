@@ -15,6 +15,7 @@
 * (react Ant Design of React[http://110.41.179.89/pay/home](http://110.41.179.89/pay/home))<span  style="color: red;"> 账号：admin 密码: 123456</span>
 * (vue element ui plus预览地址[http://110.41.179.89/vue/home)](http://110.41.179.89/vue/home))<span  style="color: red;"> 账号：admin 密码: 123456</span>
 * (vue Ant Design of Vue 预览地址[http://110.41.179.89/antdv/home)](http://110.41.179.89/antdv/home))<span  style="color: red;"> 账号：admin 密码: 123456</span>
+* (Angular Ant Design of Angular 预览地址[http://110.41.179.89/angular)](http://110.41.179.89/angular))<span  style="color: red;"> 账号：admin 密码: 123456</span>
 
 * 
 ## 34.app下载地址

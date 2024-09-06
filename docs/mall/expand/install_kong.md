@@ -76,6 +76,12 @@ sudo yum install -y kong-3.7.1.rpm
 cp /etc/kong/kong.conf.default /etc/kong/kong.conf
 vim /etc/kong/kong.conf 修改pg配置即可
 
+pg_host = 127.0.0.1    
+pg_user = kong            
+pg_password = kong                 
+pg_database = kong            
+
+
 3. 初始化
 kong migrations bootstrap -c /etc/kong/kong.conf
 
