@@ -1,5 +1,7 @@
 # 演示地址
 
+## 微信群
+![img.png](img.png)
 ## 1.zero-admin地址
 [http://110.41.179.89/mall](http://110.41.179.89/mall)   账号：admin 密码: 123456
 
