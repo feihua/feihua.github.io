@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ubuntu22.04上安装和使用nginx | zero-mall</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/images/logo.png">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?db45b22dd80cbdd69ce7f89efe8f8581";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+        </script>
+    <meta name="description" content="zero-admin文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.3fc482b2.css" as="style"><link rel="preload" href="/assets/js/app.6f13fcf6.js" as="script"><link rel="preload" href="/assets/js/2.cb916cdd.js" as="script"><link rel="preload" href="/assets/js/1.26a9081a.js" as="script"><link rel="preload" href="/assets/js/38.62c0c4c4.js" as="script"><link rel="prefetch" href="/assets/js/10.31286045.js"><link rel="prefetch" href="/assets/js/11.1ef3529a.js"><link rel="prefetch" href="/assets/js/12.7ffefabe.js"><link rel="prefetch" href="/assets/js/13.988c0d4d.js"><link rel="prefetch" href="/assets/js/14.7dfa2049.js"><link rel="prefetch" href="/assets/js/15.364f143b.js"><link rel="prefetch" href="/assets/js/16.f0dc7b4a.js"><link rel="prefetch" href="/assets/js/17.8254979e.js"><link rel="prefetch" href="/assets/js/18.308ae158.js"><link rel="prefetch" href="/assets/js/19.6145e439.js"><link rel="prefetch" href="/assets/js/20.9f7e37d1.js"><link rel="prefetch" href="/assets/js/21.f4c79481.js"><link rel="prefetch" href="/assets/js/22.11fb56b4.js"><link rel="prefetch" href="/assets/js/23.f566e9af.js"><link rel="prefetch" href="/assets/js/24.4a696dcb.js"><link rel="prefetch" href="/assets/js/25.f9749a96.js"><link rel="prefetch" href="/assets/js/26.649ba459.js"><link rel="prefetch" href="/assets/js/27.117cdabf.js"><link rel="prefetch" href="/assets/js/28.82a58578.js"><link rel="prefetch" href="/assets/js/29.4dff99cf.js"><link rel="prefetch" href="/assets/js/3.e32aba90.js"><link rel="prefetch" href="/assets/js/30.85db61f9.js"><link rel="prefetch" href="/assets/js/31.6bae527c.js"><link rel="prefetch" href="/assets/js/32.bc47907c.js"><link rel="prefetch" href="/assets/js/33.96f71f73.js"><link rel="prefetch" href="/assets/js/34.76fa3ddf.js"><link rel="prefetch" href="/assets/js/35.064fe3fb.js"><link rel="prefetch" href="/assets/js/36.30d08335.js"><link rel="prefetch" href="/assets/js/37.5b888df5.js"><link rel="prefetch" href="/assets/js/39.90d98b29.js"><link rel="prefetch" href="/assets/js/4.d430a959.js"><link rel="prefetch" href="/assets/js/40.dcefb4c2.js"><link rel="prefetch" href="/assets/js/41.a5b5aad7.js"><link rel="prefetch" href="/assets/js/5.c0e8114f.js"><link rel="prefetch" href="/assets/js/6.b08aab15.js"><link rel="prefetch" href="/assets/js/7.99450ebe.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.e60e8082.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3fc482b2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">zero-mall</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/mall/" class="nav-link router-link-active">
+  使用文档
+</a></div><div class="nav-item"><a href="/demo/" class="nav-link">
+  演示地址
+</a></div> <a href="https://github.com/feihua/zero-admin" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/mall/" class="nav-link router-link-active">
+  使用文档
+</a></div><div class="nav-item"><a href="/demo/" class="nav-link">
+  演示地址
+</a></div> <a href="https://github.com/feihua/zero-admin" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/mall/" aria-current="page" class="sidebar-link">介绍</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>后端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mall/backend/development/env.html" class="sidebar-link">环境准备</a></li><li><a href="/mall/backend/development/start.html" class="sidebar-link">本地启动</a></li><li><a href="/mall/backend/development/goland.html" class="sidebar-link">二次开发(重点)</a></li><li><a href="/mall/backend/development/goland-new.html" class="sidebar-link">二次开发(重点)-新版本</a></li><li><a href="/mall/backend/deploy/docker.html" class="sidebar-link">在docker上部署</a></li><li><a href="/mall/backend/deploy/k8s.html" class="sidebar-link">在k8s上部署</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mall/frontend/overview.html" class="sidebar-link">概述</a></li><li><a href="/mall/frontend/dev.html" class="sidebar-link">本地开发</a></li><li><a href="/mall/frontend/build.html" class="sidebar-link">项目部署</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>移动端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mall/app/overview.html" class="sidebar-link">概述</a></li><li><a href="/mall/app/dev.html" class="sidebar-link">本地开发</a></li><li><a href="/mall/app/build.html" class="sidebar-link">项目打包</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>扩展</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mall/expand/install_ubuntu.html" class="sidebar-link">Ubuntu22.04上安装和使用Go</a></li><li><a href="/mall/expand/install_nginx.html" aria-current="page" class="active sidebar-link">Ubuntu22.04上安装和使用nginx</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mall/expand/install_nginx.html#_1-安装" class="sidebar-link">1.安装</a></li><li class="sidebar-sub-header"><a href="/mall/expand/install_nginx.html#_2-配置文件路径" class="sidebar-link">2.配置文件路径</a></li><li class="sidebar-sub-header"><a href="/mall/expand/install_nginx.html#_3-静态文件路径" class="sidebar-link">3.静态文件路径</a></li></ul></li><li><a href="/mall/expand/xshell_color.html" class="sidebar-link">Xshell 绿色主题配色</a></li><li><a href="/mall/expand/install_kong.html" class="sidebar-link">kong网关安装</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ubuntu22-04上安装和使用nginx"><a href="#ubuntu22-04上安装和使用nginx" class="header-anchor">#</a> Ubuntu22.04上安装和使用nginx</h1> <h2 id="_1-安装"><a href="#_1-安装" class="header-anchor">#</a> 1.安装</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">apt</span> <span class="token function">install</span> nginx
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="_2-配置文件路径"><a href="#_2-配置文件路径" class="header-anchor">#</a> 2.配置文件路径</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">vim</span> /etc/nginx/sites-enabled/default
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-shell line-numbers-mode"><pre class="language-shell"><code>
+server <span class="token punctuation">{</span>
+	listen <span class="token number">80</span> default_server<span class="token punctuation">;</span>
+	listen <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:80 default_server<span class="token punctuation">;</span>
+
+
+	root /var/www/html<span class="token punctuation">;</span>
+
+	<span class="token comment"># Add index.php to the list if you are using PHP</span>
+	index index.html index.htm index.nginx-debian.html<span class="token punctuation">;</span>
+
+	server_name _<span class="token punctuation">;</span>
+
+
+	location /api <span class="token punctuation">{</span>
+		proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+		proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+		proxy_pass http://127.0.0.1:8888<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	location /app <span class="token punctuation">{</span>
+		proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+		proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+		proxy_pass http://127.0.0.1:9999/<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	location /web <span class="token punctuation">{</span>
+		proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+		proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+		proxy_pass http://127.0.0.1:7777/<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	location /salvo/interview/ <span class="token punctuation">{</span>
+		proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+		proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+		proxy_pass http://127.0.0.1:8100/<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	location /hertz/ <span class="token punctuation">{</span>
+		proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+		proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+		proxy_pass http://127.0.0.1:6666/<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	location /simple/ <span class="token punctuation">{</span>
+		proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+		proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header REMOTE-HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+		proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+		proxy_pass http://127.0.0.1:6677/<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	location ^~ /mall<span class="token punctuation">{</span>
+		<span class="token builtin class-name">alias</span> html/mall<span class="token punctuation">;</span>
+		index index.html<span class="token punctuation">;</span> 
+		try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /mall/index.html<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	location ^~ /pc<span class="token punctuation">{</span>
+		<span class="token builtin class-name">alias</span> html/pc<span class="token punctuation">;</span>
+		index index.html<span class="token punctuation">;</span> 
+		try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /pc/index.html<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	location ^~ /salvo<span class="token punctuation">{</span>
+		<span class="token builtin class-name">alias</span> html/salvo<span class="token punctuation">;</span>
+		index index.html<span class="token punctuation">;</span> 
+		try_files <span class="token variable">$uri</span> <span class="token variable">$uri</span>/ /salvo/index.html<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br></div></div><h2 id="_3-静态文件路径"><a href="#_3-静态文件路径" class="header-anchor">#</a> 3.静态文件路径</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>/usr/share/nginx/html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/sbin/nginx
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2024/05/22, 09:17:23</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mall/expand/install_ubuntu.html" class="prev">
+        Ubuntu22.04上安装和使用Go
+      </a></span> <span class="next"><a href="/mall/expand/xshell_color.html">
+        Xshell 绿色主题配色
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6f13fcf6.js" defer></script><script src="/assets/js/2.cb916cdd.js" defer></script><script src="/assets/js/1.26a9081a.js" defer></script><script src="/assets/js/38.62c0c4c4.js" defer></script>
+  </body>
+</html>
